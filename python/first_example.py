@@ -10,11 +10,14 @@ load_dotenv()
 client = OpenAI()
 
 completion = client.chat.completions.create(
-    model="gpt-4o-mini",
+    model="gpt-4o",
+    n = 1,
     messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "Write a haiku about recursion in programming."},
+        {"role": "system", "content": "Отвечай кратко, но с обьяснением."},
+        {"role": "user", "content": "Сколько тебе лет."},
     ],
 )
 
 print(completion.choices[0].message)
+
+

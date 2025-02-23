@@ -1,0 +1,66 @@
+{
+  "task": "transcribe",
+  "language": "english",
+  "duration": 11.619999885559082,
+  "text": "This is a test audio recording and I'll try to convert this audio to text using speech-to-text model recognition from OpenAI.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0,
+      "end": 8.319999694824219,
+      "text": " This is a test audio recording and I'll try to convert this audio to text using speech-to-text",
+      "tokens": [
+        50364,
+        639,
+        307,
+        257,
+        1500,
+        6278,
+        6613,
+        293,
+        286,
+        603,
+        853,
+        281,
+        7620,
+        341,
+        6278,
+        281,
+        2487,
+        1228,
+        6218,
+        12,
+        1353,
+        12,
+        25111,
+        50780
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.29314637184143066,
+      "compression_ratio": 1.1792452335357666,
+      "no_speech_prob": 0.01721111871302128
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 8.319999694824219,
+      "end": 10.84000015258789,
+      "text": " model recognition from OpenAI.",
+      "tokens": [
+        50780,
+        2316,
+        11150,
+        490,
+        7238,
+        48698,
+        13,
+        50906
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.29314637184143066,
+      "compression_ratio": 1.1792452335357666,
+      "no_speech_prob": 0.01721111871302128
+    }
+  ]
+}

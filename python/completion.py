@@ -1,6 +1,6 @@
 import json
 from openai import OpenAI
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 from pprint import pprint
 from utils.conversion import object_to_dict
 
@@ -42,4 +42,4 @@ except json.JSONDecodeError:
     
 
 
-pprint(object_to_dict(completion), indent = 1)
+# pprint(object_to_dict(completion), indent = 1)

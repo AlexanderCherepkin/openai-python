@@ -4,6 +4,8 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from pprint import pprint
 from utils.conversion import object_to_dict
+from utils.file_utils import generate_file_name_with_extension
+
 
 # Загружаем переменные окружения
 load_dotenv()
@@ -12,15 +14,14 @@ load_dotenv()
 client = OpenAI()
 
 # Формируем текстовый запрос для генерации изображения
-prompt = (
-    "A luminous, transparent glass woman and man figure in EMS  training and dancing with an hourglass body, showcasing an intricate internal ecosystem, featuring miniature plants with delicate moss and flowers sprouting from within, blurring the line between surreal nature and organic growth, set against a dreamy bokeh background that evokes an ethereal atmosphere, with a focus on a portrait profile, adorned with lush green foliage, symbolizing biodiversity and the inner world, rendered in stunning 3D digital art with photorealistic textures, highlighting the intricate details of the figure's skin, hair, and surroundings, with a medium hairstyle that appears to be woven from the very plants and flowers that inhabit her, all presented in high-resolution with an emphasis on capturing the subtle play of light and abstract big particle effect on her fragile, crystalline form. ems training"
-)
+prompt = "multiple elefant in the cray sky"
+
 # Генерация изображения с помощью DALL-E 3
 response = client.images.generate(
     model="dall-e-3",
     prompt=prompt,
     size="1024x1024",
-    quality="hd",
+    quality="standard",
     n=1,
 )
 
@@ -36,7 +37,7 @@ images_dir = os.path.join(os.getcwd(), "images")
 os.makedirs(images_dir, exist_ok=True)
 
 # Указываем путь и имя файла для сохранения
-file_name = "generated_image.png"
+file_name = generate_file_name_with_extension(prompt, images_dir, "png")
 file_path = os.path.join(images_dir, file_name)
 
 

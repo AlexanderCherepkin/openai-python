@@ -32,3 +32,31 @@ def get_next_version_number(base_file_name, extension, dir):
             highest_version = max(highest_version, file_version)
 
     return highest_version + 1
+  
+import os
+import json
+
+def write_image_data_to_json_file(file_path, data):
+    """
+    Записывает данные в JSON-файл. Если файл уже существует, добавляет данные в список.
+    """
+    # Проверяем, существует ли файл и не пуст ли он
+    if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+        try:
+            with open(file_path, "r", encoding="utf-8") as file:
+                existing_data = json.load(file)  # Загружаем JSON-данные
+                if not isinstance(existing_data, list):  
+                    existing_data = [existing_data]  # Преобразуем в список, если это не массив
+        except (json.JSONDecodeError, IOError):
+            existing_data = []  # Если файл повреждён или пуст, создаём пустой список
+    else:
+        existing_data = []  # Если файла нет, создаём пустой список
+
+    # Добавляем новые данные
+    existing_data.append(data)
+
+    # Записываем обновлённые данные обратно в файл
+    with open(file_path, "w", encoding="utf-8") as file:
+        json.dump(existing_data, file, indent=4, ensure_ascii=False)
+
+

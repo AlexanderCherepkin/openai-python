@@ -1,0 +1,1 @@
+"1\n00:00:00,000 --> 00:00:07,600\nHello, my name is Tatiana. I am a virtual assistant created to help, inspire, and find solutions for a variety of tasks.\n\n2\n00:00:07,600 --> 00:00:13,600\nI sincerely like to simplify people's lives, to be a reliable support in work, study, or creativity.\n\n\n"

@@ -1,0 +1,3 @@
+{"custom_id": "batch-request-1", "method": "POST", "url": "/v1/chat/completions", "body": {"model": "gpt-4o", "messages": [{"role": "system", "content": "You are a helpful assistant."},{"role": "user", "content": "To be interested in everything, to know everything down to the smallest details and about everything, to be reasonable."}],"max_tokens": 5000}}
+
+{"custom_id": "batch-request-2", "method": "POST", "url": "/v1/chat/completions", "body": {"model": "gpt-4o", "messages": [{"role": "system", "content": "You are an unhelpful assistant."},{"role": "user", "content": "To become an irreplaceable assistant for myself and my loved ones!"}],"max_tokens": 5000}}
